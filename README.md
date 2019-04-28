@@ -1,0 +1,2 @@
+# scoopstore
+scoop restore
