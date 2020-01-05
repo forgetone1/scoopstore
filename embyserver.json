@@ -4,14 +4,16 @@
     "description": "embyserver",
     "license": "",
     "url": "https://github.com/MediaBrowser/Emby.Releases/releases/download/4.3.1.0/embyserver-win-x64-4.3.1.0.7z",
-    "hash": "6b47ebba15ed888360efb17d70ce9c3f95e3f114a9f77b6388b6df1b36e7dcea",    
-    "extract_dir": "embyserver-win-x64-4.3.1.0",
+    "hash": "6b47ebba15ed888360efb17d70ce9c3f95e3f114a9f77b6388b6df1b36e7dcea",        
     "bin": [
-        "EmbyServer.exe"
+        "system\\EmbyServer.exe"
     ],
-    "env_set": {
-        "RABBITMQ_SERVER": "$dir"
-    },
+	"shortcuts": [
+        [
+            "EmbyServer.exe",
+            "EmbyServer"
+        ]
+    ],    
     "checkver": {
         "url": "https://emby.media/windows-server.html",
         "re": "The latest release of emby is <b>([\\d.]+)</b>"
