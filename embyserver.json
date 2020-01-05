@@ -10,7 +10,7 @@
     ],
 	"shortcuts": [
         [
-            "EmbyServer.exe",
+            "system\\EmbyServer.exe",
             "EmbyServer"
         ]
     ],    
