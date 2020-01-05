@@ -1,0 +1,24 @@
+{
+    "homepage": "https://emby.media",
+    "version": "4.3.1.0",
+    "description": "embyserver",
+    "license": "",
+    "url": "https://github.com/MediaBrowser/Emby.Releases/releases/download/4.3.1.0/embyserver-win-x64-4.3.1.0.7z",
+    "hash": "6b47ebba15ed888360efb17d70ce9c3f95e3f114a9f77b6388b6df1b36e7dcea",
+    "depends": "embyserver",
+    "extract_dir": "embyserver-win-x64-4.3.1.0",
+    "bin": [
+        "EmbyServer.exe"
+    ],
+    "env_set": {
+        "RABBITMQ_SERVER": "$dir"
+    },
+    "checkver": {
+        "url": "https://emby.media/windows-server.html",
+        "re": "The latest release of emby is <b>([\\d.]+)</b>"
+    },
+    "autoupdate": {
+        "url": "https://github.com/rabbitmq/rabbitmq-server/releases/download/v$version/rabbitmq-server-windows-$version.zip",
+        "extract_dir": "embyserver-win-x64-$version"
+    }
+}
